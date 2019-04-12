@@ -7,7 +7,7 @@ public class score : MonoBehaviour
 {
     public Text winText;
     public Text countText;
-    private int count;
+    private double count;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +20,13 @@ public class score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        count = count + 1;
+        count = count + 1.0;
         SetCountText();
     }
     void SetCountText()
     {
         //Set the text property of our our countText object to "Count: " followed by the number stored in our count variable.
-        countText.text = "Count: " + count.ToString();
+        countText.text = "Timer: " + count.ToString();
 
         //Check if we've collected all 12 pickups. If we have...
         if (count >= 12)
